@@ -1,11 +1,19 @@
-// layout.tsx
 import React from "react"
-import NavBar from "./nav-bar"
+import "muicss/lib/sass/mui.scss"
+import "../styles/body.scss"
+
+import Header from "./header"
+import Footer from "./footer"
+import Container from "muicss/lib/react/container"
+import Style from "../styles/content.module.scss"
 
 const Layout = ({ children }) => (
  <>
-   <NavBar />
+   <Header />
+   <Container className={Style.contentWrapper}>
    {children}
+   </Container>
+   <Footer />
  </>
 )
 
